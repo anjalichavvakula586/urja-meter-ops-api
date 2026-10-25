@@ -398,3 +398,6 @@ I initially guessed the portal's API paths and used `username` as the login form
 ### 5. What would you criticise about your own solution?
 
 The solution prioritizes the core read-only endpoints rather than providing the complete portal data model. Pagination metadata, date-range filtering, and meter hierarchy are not exposed. The OpenAPI document is maintained manually, and automated tests use a fake upstream, so they cannot guarantee compatibility with future portal changes. I would address these limitations with verified contract tests, clearer upstream documentation, and carefully scoped integration tests.
+**Live Render API:** https://urja-meter-ops-api-dycu.onrender.com
+
+**Swagger API Documentation:** https://urja-meter-ops-api-dycu.onrender.com/docs
