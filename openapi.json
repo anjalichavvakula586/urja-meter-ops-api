@@ -517,9 +517,8 @@
     }
   },
   "servers": [
-    {
-      "url": "http://localhost:3000",
-      "description": "Local development"
-    }
-  ]
+  {
+    "url": "https://urja-meter-ops-api-dycu.onrender.com"
+  }
+]
 }
