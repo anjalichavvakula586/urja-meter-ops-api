@@ -1,0 +1,14 @@
+{
+  "name": "urja-meter-ops-api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Clean read-only REST API in front of the Urja Meter Ops portal",
+  "main": "src/server.js",
+  "engines": { "node": ">=20.6" },
+  "scripts": {
+    "start": "node --env-file=.env src/server.js",
+    "dev": "node --watch --env-file=.env src/server.js",
+    "test": "node --test"
+  },
+  "dependencies": { "express": "^4.19.2" }
+}
