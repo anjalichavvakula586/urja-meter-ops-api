@@ -17,7 +17,15 @@ function createApp({ client, log = () => {} }) {
   const app = express();
   app.disable('x-powered-by');
   const wrap = (fn) => (req, res, next) => Promise.resolve(fn(req, res)).catch(next);
-
+  
+app.get('/', (req, res) => {
+  res.json({
+    name: 'Urja Meter Ops API',
+    status: 'running',
+    docs: '/docs',
+    health: '/health'
+  });
+});
   app.get(ROUTES.health.express, (req, res) => res.json({ status: 'ok' }));
   app.get(ROUTES.search.express, wrap(async (req, res) => res.json(await service.searchMeters(client, req.query))));
   app.get(ROUTES.location.express, wrap(async (req, res) => res.json(await service.getLocation(client, req.params.meterId))));
